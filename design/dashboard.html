@@ -10,6 +10,8 @@ content="width=device-width,initial-scale=1.0">
 
 <title>Virtual Genie CRM</title>
 
+<script src="https://cdn.tailwindcss.com"></script>
+
 <link rel="stylesheet"
 href="../css/style.css">
 
@@ -17,9 +19,243 @@ href="../css/style.css">
 
 <body>
 
-<div id="dashboard"></div>
+<div class="flex min-h-screen">
 
-<script src="../js/app.js"></script>
+<!-- Sidebar -->
+
+<aside class="w-72 glass border-r border-white/10 p-6 hidden lg:flex flex-col">
+
+<h1 class="text-2xl font-bold mb-10">
+Virtual Genie
+</h1>
+
+<nav class="space-y-3">
+
+<button class="w-full text-left px-4 py-3 rounded-xl bg-blue-600">
+🏠 Dashboard
+</button>
+
+<button class="w-full text-left px-4 py-3 rounded-xl hover:bg-slate-700">
+👥 Companies
+</button>
+
+<button class="w-full text-left px-4 py-3 rounded-xl hover:bg-slate-700">
+📞 Calls
+</button>
+
+<button class="w-full text-left px-4 py-3 rounded-xl hover:bg-slate-700">
+📦 Products
+</button>
+
+<button class="w-full text-left px-4 py-3 rounded-xl hover:bg-slate-700">
+⚙ Settings
+</button>
+
+</nav>
+
+<div class="mt-auto glass p-5">
+
+<h3 class="font-bold mb-2">
+AIVA Assistant
+</h3>
+
+<p class="text-slate-400 text-sm">
+Ready to help.
+</p>
+
+</div>
+
+</aside>
+
+<!-- Main -->
+
+<main class="flex-1 p-8">
+
+<!-- Header -->
+
+<div class="flex justify-between items-center mb-10">
+
+<div>
+
+<h1 class="text-4xl font-bold">
+Good Evening 👋
+</h1>
+
+<p class="text-slate-400 mt-2">
+Welcome back to Virtual Genie CRM
+</p>
+
+</div>
+
+<input
+placeholder="Search..."
+class="input max-w-sm">
+
+</div>
+
+<!-- KPI -->
+
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+
+<div class="glass p-6">
+
+<p class="label">
+Today's Calls
+</p>
+
+<div class="kpi mt-3">
+26
+</div>
+
+</div>
+
+<div class="glass p-6">
+
+<p class="label">
+Follow-ups
+</p>
+
+<div class="kpi mt-3">
+14
+</div>
+
+</div>
+
+<div class="glass p-6">
+
+<p class="label">
+Pipeline
+</p>
+
+<div class="kpi mt-3">
+₹12.6L
+</div>
+
+</div>
+
+<div class="glass p-6">
+
+<p class="label">
+Clients
+</p>
+
+<div class="kpi mt-3">
+41
+</div>
+
+</div>
+
+</div>
+
+<!-- Bottom Grid -->
+
+<div class="grid xl:grid-cols-3 gap-6 mt-8">
+
+<div class="glass p-6 xl:col-span-2">
+
+<h2 class="text-xl font-bold mb-6">
+Recent Activity
+</h2>
+
+<div class="space-y-5">
+
+<div class="flex justify-between">
+
+<div>
+
+<h3>ABC Dental Clinic</h3>
+
+<p class="text-slate-400">
+Website Proposal Sent
+</p>
+
+</div>
+
+<span class="text-green-400">
+2 min ago
+</span>
+
+</div>
+
+<div class="flex justify-between">
+
+<div>
+
+<h3>Bliss Beach Villa</h3>
+
+<p class="text-slate-400">
+Meeting Scheduled
+</p>
+
+</div>
+
+<span class="text-yellow-400">
+1 hour
+</span>
+
+</div>
+
+<div class="flex justify-between">
+
+<div>
+
+<h3>Elite Builders</h3>
+
+<p class="text-slate-400">
+AI Receptionist Demo
+</p>
+
+</div>
+
+<span class="text-blue-400">
+Today
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="glass p-6">
+
+<h2 class="text-xl font-bold mb-6">
+Today's Tasks
+</h2>
+
+<div class="space-y-4">
+
+<div class="glass p-4">
+
+Call ABC Dental
+
+</div>
+
+<div class="glass p-4">
+
+Send Proposal
+
+</div>
+
+<div class="glass p-4">
+
+Follow-up HVAC
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</div>
+
+<button class="fab">
++
+</button>
 
 </body>
 
