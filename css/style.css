@@ -1,69 +1,282 @@
+/* ===========================
+   VIRTUAL GENIE DESIGN SYSTEM
+=========================== */
+
+:root{
+
+--bg:#0B1120;
+--surface:#111827;
+--surface-2:#1E293B;
+
+--primary:#3B82F6;
+--primary-hover:#2563EB;
+
+--success:#22C55E;
+--warning:#F59E0B;
+--danger:#EF4444;
+
+--text:#F8FAFC;
+--text-muted:#94A3B8;
+
+--border:rgba(255,255,255,.08);
+
+--radius-sm:12px;
+--radius:18px;
+--radius-lg:26px;
+
+--shadow:
+0 10px 30px rgba(0,0,0,.35);
+
+}
+
+/* RESET */
+
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-  background:#121212;
-  color:#ffffff;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
+
+background:var(--bg);
+
+color:var(--text);
+
+font-family:
+Inter,
+system-ui,
+sans-serif;
+
+min-height:100vh;
+
 }
 
-.topbar{
-  background:#1e1e1e;
-  padding:18px;
-  text-align:center;
-  border-bottom:1px solid #333;
+/* CONTAINER */
+
+.container{
+
+max-width:1500px;
+
+margin:auto;
+
+padding:24px;
+
 }
 
-.topbar h1{
-  font-size:22px;
+/* TITLES */
+
+h1{
+
+font-size:34px;
+
+font-weight:800;
+
+letter-spacing:-1px;
+
 }
 
-#app{
-  flex:1;
-  padding:20px;
+h2{
+
+font-size:22px;
+
+font-weight:700;
+
 }
+
+h3{
+
+font-size:18px;
+
+font-weight:600;
+
+}
+
+p{
+
+color:var(--text-muted);
+
+line-height:1.6;
+
+}
+
+/* CARDS */
 
 .card{
-  background:#1f1f1f;
-  border-radius:16px;
-  padding:18px;
-  margin-bottom:15px;
-  border:1px solid #2e2e2e;
+
+background:var(--surface);
+
+border:1px solid var(--border);
+
+border-radius:var(--radius);
+
+padding:22px;
+
+box-shadow:var(--shadow);
+
+transition:.25s;
+
 }
 
-.card h2{
-  font-size:18px;
-  margin-bottom:10px;
+.card:hover{
+
+transform:translateY(-4px);
+
+border-color:rgba(59,130,246,.35);
+
 }
 
-.stat{
-  font-size:32px;
-  font-weight:bold;
+/* BUTTON */
+
+.btn{
+
+background:var(--primary);
+
+color:white;
+
+padding:14px 22px;
+
+border:none;
+
+border-radius:14px;
+
+font-size:15px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.25s;
+
 }
 
-.bottom-nav{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  height:65px;
-  background:#1e1e1e;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-  border-top:1px solid #333;
+.btn:hover{
+
+background:var(--primary-hover);
+
+transform:translateY(-2px);
+
 }
 
-.bottom-nav button{
-  background:none;
-  border:none;
-  color:white;
-  font-size:26px;
-  cursor:pointer;
+/* INPUT */
+
+.input{
+
+width:100%;
+
+padding:16px;
+
+background:var(--surface-2);
+
+border:1px solid var(--border);
+
+border-radius:14px;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+}
+
+.input:focus{
+
+border-color:var(--primary);
+
+}
+
+/* GRID */
+
+.grid{
+
+display:grid;
+
+gap:20px;
+
+}
+
+.grid-2{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+.grid-3{
+
+grid-template-columns:
+repeat(3,1fr);
+
+}
+
+.grid-4{
+
+grid-template-columns:
+repeat(4,1fr);
+
+}
+
+/* KPI */
+
+.kpi{
+
+font-size:38px;
+
+font-weight:800;
+
+margin-top:10px;
+
+}
+
+/* FLOAT BUTTON */
+
+.fab{
+
+position:fixed;
+
+right:24px;
+
+bottom:90px;
+
+width:64px;
+
+height:64px;
+
+border-radius:50%;
+
+border:none;
+
+background:var(--primary);
+
+color:white;
+
+font-size:34px;
+
+box-shadow:0 15px 35px rgba(59,130,246,.4);
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.grid-2,
+.grid-3,
+.grid-4{
+
+grid-template-columns:1fr;
+
+}
+
+.container{
+
+padding:18px;
+
+}
+
 }
